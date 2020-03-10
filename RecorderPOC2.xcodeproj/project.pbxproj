@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF49DD812417B6CD001DA12A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49DD802417B6CD001DA12A /* Recorder.swift */; };
+		BF49DD842417B8F4001DA12A /* MeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49DD832417B8F4001DA12A /* MeterView.swift */; };
+		BF49DD862417BAE5001DA12A /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF49DD852417BAE5001DA12A /* ActionView.swift */; };
 		BF5756CA2416D837005DFE90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756C92416D837005DFE90 /* AppDelegate.swift */; };
 		BF5756CC2416D837005DFE90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756CB2416D837005DFE90 /* SceneDelegate.swift */; };
 		BF5756CE2416D837005DFE90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756CD2416D837005DFE90 /* ContentView.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF49DD802417B6CD001DA12A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		BF49DD832417B8F4001DA12A /* MeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeterView.swift; sourceTree = "<group>"; };
+		BF49DD852417BAE5001DA12A /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
 		BF5756C62416D837005DFE90 /* RecorderPOC2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecorderPOC2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5756C92416D837005DFE90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5756CB2416D837005DFE90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF49DD7F2417B654001DA12A /* Microphone */ = {
+			isa = PBXGroup;
+			children = (
+				BF5756F92416EA59005DFE90 /* MicrophoneMonitor.swift */,
+				BF49DD802417B6CD001DA12A /* Recorder.swift */,
+			);
+			path = Microphone;
+			sourceTree = "<group>";
+		};
+		BF49DD822417B8E3001DA12A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF49DD832417B8F4001DA12A /* MeterView.swift */,
+				BF49DD852417BAE5001DA12A /* ActionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BF5756BD2416D837005DFE90 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +125,8 @@
 		BF5756C82416D837005DFE90 /* RecorderPOC2 */ = {
 			isa = PBXGroup;
 			children = (
+				BF49DD822417B8E3001DA12A /* View */,
+				BF49DD7F2417B654001DA12A /* Microphone */,
 				BF5756C92416D837005DFE90 /* AppDelegate.swift */,
 				BF5756CB2416D837005DFE90 /* SceneDelegate.swift */,
 				BF5756CD2416D837005DFE90 /* ContentView.swift */,
@@ -108,7 +134,6 @@
 				BF5756D42416D839005DFE90 /* LaunchScreen.storyboard */,
 				BF5756D72416D839005DFE90 /* Info.plist */,
 				BF5756D12416D839005DFE90 /* Preview Content */,
-				BF5756F92416EA59005DFE90 /* MicrophoneMonitor.swift */,
 			);
 			path = RecorderPOC2;
 			sourceTree = "<group>";
@@ -270,10 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF49DD812417B6CD001DA12A /* Recorder.swift in Sources */,
 				BF5756CA2416D837005DFE90 /* AppDelegate.swift in Sources */,
+				BF49DD842417B8F4001DA12A /* MeterView.swift in Sources */,
 				BF5756CC2416D837005DFE90 /* SceneDelegate.swift in Sources */,
 				BF5756FA2416EA59005DFE90 /* MicrophoneMonitor.swift in Sources */,
 				BF5756CE2416D837005DFE90 /* ContentView.swift in Sources */,
+				BF49DD862417BAE5001DA12A /* ActionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

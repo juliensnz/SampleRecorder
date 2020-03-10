@@ -47,17 +47,6 @@ class MicrophoneMonitor: ObservableObject {
         do {
             audioRecorder = try AVAudioRecorder(url: url, settings: recorderSettings)
             try audioSession.setCategory(.playAndRecord, mode: .default, options: [])
-            if (audioSession.isInputGainSettable) {
-                print("try to change gain")
-                try audioSession.setInputGain(1);
-                print("changed gain")
-//                if (!success) {
-//                    NSLog(@"%@", error);
-//                }
-            } else {
-                print("cannot change gain")
-//              NSLog('error during gain change')
-            }
             
             startMonitoring()
         } catch {
@@ -76,7 +65,6 @@ class MicrophoneMonitor: ObservableObject {
             self.audioRecorder.averagePower(forChannel: 0)
             count += 1;
             if (count == 10) {
-                print(self.audioRecorder.averagePower(forChannel: 0).description + " : " + self.audioRecorder.peakPower(forChannel: 0).description);
                 self.soundSamples = [self.audioRecorder.averagePower(forChannel: 0) + self.audioRecorder.peakPower(forChannel: 0)] + self.soundSamples[..<(self.numberOfSamples-1)]
                 self.currentSample = self.currentSample + 1
                 count = 0;

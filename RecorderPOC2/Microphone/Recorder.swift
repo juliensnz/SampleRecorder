@@ -31,26 +31,14 @@ class Recorder: ObservableObject {
             }
         }
         
-        self.url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("current_recording.m4a")
-        do {
-            try "".write(to: url, atomically: true, encoding: .utf8)
-        } catch {
-            fatalError(error.localizedDescription)
-        }
+        self.url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("current_recording.wav")
         
         print(self.url.description);
         
-//        self.recorderSettings = [
-//            AVFormatIDKey: NSNumber(value: kAudioFormatLinearPCM),
-//            AVSampleRateKey: 44100.0,
-//            AVNumberOfChannelsKey: 1,
-//            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
-//        ]
-        
         self.recorderSettings = [
-            AVFormatIDKey: NSNumber(value: kAudioFormatMPEG4AAC_LD),
+            AVFormatIDKey: NSNumber(value: kAudioFormatLinearPCM),
             AVSampleRateKey: 44100.0,
-            AVNumberOfChannelsKey: 2,
+            AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
         ]
         
@@ -80,6 +68,8 @@ class Recorder: ObservableObject {
             
             audioPlayer!.prepareToPlay()
             audioPlayer!.play()
-        } catch let error {}
+        } catch let error {
+
+        }
     }
 }

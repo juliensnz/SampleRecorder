@@ -19,12 +19,14 @@ struct ActionView: View {
             }) {
                 Text("Start recording")
             }
+            Spacer()
             Button(action: {
                 print("stop recording")
                 self.recorder.stopRecording()
             }) {
                 Text("Stop recording")
             }
+            Spacer()
             if (self.recorder.hasRecording) {
                 Button(action: {
                     print("play recording")

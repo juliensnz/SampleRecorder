@@ -19,6 +19,9 @@
 		BF5756E12416D839005DFE90 /* RecorderPOC2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756E02416D839005DFE90 /* RecorderPOC2Tests.swift */; };
 		BF5756EC2416D839005DFE90 /* RecorderPOC2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756EB2416D839005DFE90 /* RecorderPOC2UITests.swift */; };
 		BF5756FA2416EA59005DFE90 /* MicrophoneMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5756F92416EA59005DFE90 /* MicrophoneMonitor.swift */; };
+		BF987E4724185289003A4F34 /* TrimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF987E4624185289003A4F34 /* TrimView.swift */; };
+		BF987E4B24185410003A4F34 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF987E4A24185410003A4F34 /* Player.swift */; };
+		BF987E4D2418556D003A4F34 /* Trimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF987E4C2418556D003A4F34 /* Trimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		BF5756EB2416D839005DFE90 /* RecorderPOC2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderPOC2UITests.swift; sourceTree = "<group>"; };
 		BF5756ED2416D839005DFE90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5756F92416EA59005DFE90 /* MicrophoneMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneMonitor.swift; sourceTree = "<group>"; };
+		BF987E4624185289003A4F34 /* TrimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimView.swift; sourceTree = "<group>"; };
+		BF987E4A24185410003A4F34 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BF987E4C2418556D003A4F34 /* Trimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 			children = (
 				BF5756F92416EA59005DFE90 /* MicrophoneMonitor.swift */,
 				BF49DD802417B6CD001DA12A /* Recorder.swift */,
+				BF987E4A24185410003A4F34 /* Player.swift */,
+				BF987E4C2418556D003A4F34 /* Trimer.swift */,
 			);
 			path = Microphone;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				BF49DD832417B8F4001DA12A /* MeterView.swift */,
 				BF49DD852417BAE5001DA12A /* ActionView.swift */,
+				BF987E4624185289003A4F34 /* TrimView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 				BF5756DF2416D839005DFE90 /* RecorderPOC2Tests */,
 				BF5756EA2416D839005DFE90 /* RecorderPOC2UITests */,
 				BF5756C72416D837005DFE90 /* Products */,
+				BF987E4224184F42003A4F34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,17 +300,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF987E4124184EA3003A4F34 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SoundWaveForm.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SoundWaveForm.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF5756C22416D837005DFE90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF987E4724185289003A4F34 /* TrimView.swift in Sources */,
 				BF49DD812417B6CD001DA12A /* Recorder.swift in Sources */,
+				BF987E4D2418556D003A4F34 /* Trimer.swift in Sources */,
 				BF5756CA2416D837005DFE90 /* AppDelegate.swift in Sources */,
 				BF49DD842417B8F4001DA12A /* MeterView.swift in Sources */,
 				BF5756CC2416D837005DFE90 /* SceneDelegate.swift in Sources */,
 				BF5756FA2416EA59005DFE90 /* MicrophoneMonitor.swift in Sources */,
 				BF5756CE2416D837005DFE90 /* ContentView.swift in Sources */,
+				BF987E4B24185410003A4F34 /* Player.swift in Sources */,
 				BF49DD862417BAE5001DA12A /* ActionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
